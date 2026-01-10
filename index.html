@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NEET AI Exam Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>🧠 NEET AI Exam</h1>
+
+    <!-- Exam Setup -->
+    <div id="setup">
+      <label>Subject</label>
+      <select id="subject">
+        <option value="Biology">Biology</option>
+        <option value="Physics">Physics</option>
+        <option value="Chemistry">Chemistry</option>
+      </select>
+
+      <label>Chapter</label>
+<select id="chapter">
+  <!-- Chapters will be populated dynamically -->
+</select>
+
+
+      <label>Total Questions</label>
+      <input
+        type="number"
+        id="total"
+        value="5"
+        min="1"
+        max="50"
+      />
+
+      <button onclick="startExam()">Start Exam</button>
+    </div>
+
+    <!-- Exam Area -->
+    <div id="exam" class="hidden">
+      <h2 id="question"></h2>
+
+      <div id="options"></div>
+
+      <button onclick="nextQuestion()">Next</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
